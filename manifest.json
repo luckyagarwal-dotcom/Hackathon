@@ -54,6 +54,11 @@
             "rules/apiMisuseRule.js",
             "rules/mutatingArrayRule.js",
             "rules/missingReturnRule.js",
+            "rules/binarySearchMidRule.js",
+            "rules/divisionByZeroRule.js",
+            "rules/incorrectLoopUpdateRule.js",
+            "rules/floatingPointEqualityRule.js",
+            "rules/hashMapExistenceRule.js",
 
             "content.js"
             ],

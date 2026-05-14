@@ -455,6 +455,21 @@ console.log(
 const offByOneResults =
   detectOffByOne(ast);
 
+const binarySearchMidResults =
+  detectBinarySearchMidOverflow(ast);
+
+const divisionByZeroResults =
+  detectDivisionByZeroRisk(ast);
+
+const incorrectLoopUpdateResults =
+  detectIncorrectLoopUpdate(ast);
+
+const floatingPointResults =
+  detectFloatingPointEqualityRisk(ast);
+
+const hashMapResults =
+  detectMissingHashMapExistenceCheck(ast);
+
 offByOneResults.forEach(
   (result) => {
 
@@ -718,6 +733,127 @@ missingReturnResults.forEach(
 
   }
 );
+
+binarySearchMidResults.forEach(
+  (result) => {
+
+    console.warn(
+      "%cLOGICLENS DETECTION:",
+      "color:#ff1744;font-weight:bold;",
+      result.message
+    );
+
+    console.log(
+      "%cEXPLANATION:",
+      "color:#00bcd4;font-weight:bold;",
+      result.explanation
+    );
+
+    console.log(
+      "%cSUGGESTION:",
+      "color:#8bc34a;font-weight:bold;",
+      result.suggestion
+    );
+
+  }
+);
+
+divisionByZeroResults.forEach(
+  (result) => {
+
+    console.warn(
+      "%cLOGICLENS DETECTION:",
+      "color:#ff1744;font-weight:bold;",
+      result.message
+    );
+
+    console.log(
+      "%cEXPLANATION:",
+      "color:#00bcd4;font-weight:bold;",
+      result.explanation
+    );
+
+    console.log(
+      "%cSUGGESTION:",
+      "color:#8bc34a;font-weight:bold;",
+      result.suggestion
+    );
+
+  }
+);
+
+incorrectLoopUpdateResults.forEach(
+  (result) => {
+
+    console.warn(
+      "%cLOGICLENS DETECTION:",
+      "color:#ff1744;font-weight:bold;",
+      result.message
+    );
+
+    console.log(
+      "%cEXPLANATION:",
+      "color:#00bcd4;font-weight:bold;",
+      result.explanation
+    );
+
+    console.log(
+      "%cSUGGESTION:",
+      "color:#8bc34a;font-weight:bold;",
+      result.suggestion
+    );
+
+  }
+);
+
+floatingPointResults.forEach(
+  (result) => {
+
+    console.warn(
+      "%cLOGICLENS DETECTION:",
+      "color:#ff1744;font-weight:bold;",
+      result.message
+    );
+
+    console.log(
+      "%cEXPLANATION:",
+      "color:#00bcd4;font-weight:bold;",
+      result.explanation
+    );
+
+    console.log(
+      "%cSUGGESTION:",
+      "color:#8bc34a;font-weight:bold;",
+      result.suggestion
+    );
+
+  }
+);
+
+hashMapResults.forEach(
+  (result) => {
+
+    console.warn(
+      "%cLOGICLENS DETECTION:",
+      "color:#ff1744;font-weight:bold;",
+      result.message
+    );
+
+    console.log(
+      "%cEXPLANATION:",
+      "color:#00bcd4;font-weight:bold;",
+      result.explanation
+    );
+
+    console.log(
+      "%cSUGGESTION:",
+      "color:#8bc34a;font-weight:bold;",
+      result.suggestion
+    );
+
+  }
+);
+
 }, 500);
 
 function startRealtimeTracking(adapter) {
